@@ -7,49 +7,88 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Survey Form</h1>
-        <form action="#" method="POST">
-            <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-            </div>
-            <div class="form-group">
-                <label for="gender">Gender:</label>
-                <label>
-                    <input type="radio" name="gender" value="male" required> Male
-                </label>
-                <label>
-                    <input type="radio" name="gender" value="female"> Female
-                </label>
-                <label>
-                    <input type="radio" name="gender" value="other"> Other
-                </label>
-            </div>
-            <div class="form-group">
-                <label for="age">Age:</label>
-                <input type="number" id="age" name="age" required>
-            </div>
-            <div class="form-group">
-                <label for="province">Province:</label>
-                <select id="province" name="province" required>
-                    <option value="">Select your province</option>
-                    <option value="province1">Province 1</option>
-                    <option value="province2">Province 2</option>
-                    <option value="province3">Province 3</option>
-                    <option value="province4">Province 4</option>
-                    <!-- Add more provinces as needed -->
-                </select>
-            </div>
-            <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-            </div>
-            <div class="form-group">
-                <label for="feedback">Feedback:</label>
-                <textarea id="feedback" name="feedback" rows="4" required></textarea>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
+    <div class="form-container">
+        <h1>Socioeconomic Survey Form</h1>
+        <form action="#" method="post">
+            <!-- Name Field -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <!-- Gender Field -->
+            <label for="gender">Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="">Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="non-binary">Non-Binary</option>
+                <option value="other">Other</option>
+                <option value="prefer-not-to-say">Prefer Not to Say</option>
+            </select>
+
+            <!-- Age Field -->
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="0" max="120" required>
+
+            <!-- Religion Field -->
+            <label for="religion">Religion:</label>
+            <select id="religion" name="religion" required>
+                <option value="">Select Religion</option>
+                <option value="christianity">Christianity</option>
+                <option value="islam">Islam</option>
+                <option value="hinduism">Hinduism</option>
+                <option value="buddhism">Buddhism</option>
+                <option value="judaism">Judaism</option>
+                <option value="atheism">Atheism</option>
+                <option value="other">Other</option>
+            </select>
+
+            <!-- Education Level Field -->
+            <label for="education">Education Level:</label>
+            <select id="education" name="education" required>
+                <option value="">Select Education Level</option>
+                <option value="no-formal-education">No Formal Education</option>
+                <option value="primary-education">Primary Education</option>
+                <option value="secondary-education">Secondary Education</option>
+                <option value="higher-education">Higher Education</option>
+                <option value="bachelor-degree">Bachelor's Degree</option>
+                <option value="master-degree">Master's Degree</option>
+                <option value="doctorate-degree">Doctorate Degree</option>
+            </select>
+
+            <!-- Employment Status Field -->
+            <label for="employment">Employment Status:</label>
+            <select id="employment" name="employment" required>
+                <option value="">Select Employment Status</option>
+                <option value="employed">Employed</option>
+                <option value="self-employed">Self-employed</option>
+                <option value="unemployed">Unemployed</option>
+                <option value="student">Student</option>
+                <option value="retired">Retired</option>
+                <option value="unable-to-work">Unable to Work</option>
+            </select>
+
+            <!-- Income Level Field -->
+            <label for="income">Income Level:</label>
+            <select id="income" name="income" required>
+                <option value="">Select Income Level</option>
+                <option value="below-20k">Below $20,000</option>
+                <option value="20k-50k">$20,000 - $50,000</option>
+                <option value="50k-100k">$50,000 - $100,000</option>
+                <option value="above-100k">Above $100,000</option>
+            </select>
+
+            <!-- Marital Status Field -->
+            <label for="marital-status">Marital Status:</label>
+            <select id="marital-status" name="marital-status" required>
+                <option value="">Select Marital Status</option>
+                <option value="single">Single</option>
+                <option value="married">Married</option>
+                <option value="divorced">Divorced</option>
+                <option value="widowed">Widowed</option>
+            </select>
+
+            <!-- Submit Button -->
+            <button type="submit">Submit</button>
         </form>
     </div>
 </body>
